@@ -1,0 +1,19 @@
+name: JSON to outputs
+
+on:
+  push:
+
+env:
+  ENV_NAME: amt-dev
+
+jobs:
+  first:
+    name: json-outputs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v3
+
+      - name: read a file
+        run: |
+          jq '.environments."${ENV_NAME}"'

@@ -1,0 +1,13 @@
+{
+    "environments": {
+        "amt-dev": {
+            "account": "123456789098",
+            "region": "us-west-2",
+            "amiId": "",
+            "keyName": "windows3",
+            "certificateArn": "arn:aws:acm:us-west-2:123456789098:certificate/242aaf15-b63c-4884-b2c1-55287ba02611",
+            "secretsArn": "arn:aws:secretsmanager:us-west-2:123456789098:secret:qwerty/apiKeys",
+            "minimumPoolSize": 2
+        }
+    }
+}
