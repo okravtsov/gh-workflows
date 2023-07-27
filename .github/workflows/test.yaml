@@ -24,4 +24,8 @@ jobs:
       - name: use vars
         run: |
          echo ${{ steps.env-vars.outputs.env_vars }}
-          
+         
+      - name: only 1 var
+        env:
+          ACCOUNT: ${{ fromJSON(steps.env-vars.outputs.env_vars).account }}
+        run: echo $ACCOUNT          
