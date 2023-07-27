@@ -16,4 +16,7 @@ jobs:
 
       - name: read a file
         run: |
-          jq '.environments."${ENV_NAME}"'
+          QUERY=".environments.${ENV_NAME}"
+          jq $QUERY test.json
+          echo Old Style
+          jq '.environments."${ENV_NAME}"' test.json
